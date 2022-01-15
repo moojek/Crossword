@@ -1,0 +1,8 @@
+//
+// Created by moojek on 15/01/2022.
+//
+
+#ifndef CROSSWORD_BOARD_CREATOR_H
+#define CROSSWORD_BOARD_CREATOR_H
+
+#endif //CROSSWORD_BOARD_CREATOR_H
