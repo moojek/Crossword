@@ -7,7 +7,7 @@
 
 #include <ncurses.h>
 #include <panel.h>
-#include "../../misc.h"
+#include "../../utils.h"
 
 void createActions(int, int, int, int, int);
 void showActions();

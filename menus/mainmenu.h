@@ -8,7 +8,7 @@
 #include <ncurses.h>
 #include <panel.h>
 #include <string.h>
-#include "../misc.h"
+#include "../utils.h"
 #include "editmenu.h"
 
 void createMainMenu();

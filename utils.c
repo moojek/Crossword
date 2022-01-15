@@ -1,7 +1,7 @@
 //
 // Created by moojek on 12/01/2022.
 //
-#include "misc.h"
+#include "utils.h"
 
 void exitProgram()
 {

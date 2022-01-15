@@ -2,8 +2,8 @@
 // Created by moojek on 12/01/2022.
 //
 
-#ifndef CROSSWORD_MISC_H
-#define CROSSWORD_MISC_H
+#ifndef CROSSWORD_UTILS_H
+#define CROSSWORD_UTILS_H
 
 #include <ncurses.h>
 #include <assert.h>
@@ -36,4 +36,4 @@ void config();
 
 void throw(char *);
 
-#endif //CROSSWORD_MISC_H
+#endif //CROSSWORD_UTILS_H

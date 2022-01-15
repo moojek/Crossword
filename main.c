@@ -3,7 +3,7 @@
 #include <assert.h>
 #include <locale.h>
 #include "menus/mainmenu.h"
-#include "misc.h"
+#include "utils.h"
 
 int main(int argc, char const *argv[])
 {
