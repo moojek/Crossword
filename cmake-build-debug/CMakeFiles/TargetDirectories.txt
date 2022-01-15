@@ -1,0 +1,3 @@
+/home/moojek/CLionProjects/WdPC/Crossword/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/moojek/CLionProjects/WdPC/Crossword/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/moojek/CLionProjects/WdPC/Crossword/cmake-build-debug/CMakeFiles/Crossword.dir
