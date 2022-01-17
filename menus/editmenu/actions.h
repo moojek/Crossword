@@ -8,6 +8,7 @@
 #include <ncurses.h>
 #include <panel.h>
 #include "../../utils.h"
+#include "../../boards/board_creator.h"
 
 void createActions(int, int, int, int, int);
 void showActions();

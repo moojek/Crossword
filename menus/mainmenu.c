@@ -18,7 +18,7 @@ const int mainMenuTitleStrLen = 20;
 const char *mainMenuSelectStr = "Please select an option";
 const char *mainMenuOptionsStrArr[MAIN_MENU_OPTION_CNT] = {/*"Solve a crossword", */"Edit crossword boards", "Quit"};
 
-void (*optionsFunArr[MAIN_MENU_OPTION_CNT])() = {/*NULL,*/ &operateEditMenu, &exitProgram};
+int (*optionsFunArr[MAIN_MENU_OPTION_CNT])() = {/*NULL,*/ &operateEditMenu, &exitProgram};
 
 int mainMenuOption = 0;
 

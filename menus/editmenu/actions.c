@@ -18,7 +18,7 @@ const char *actionsStrArr[ACTIONS_CNT] = {"<Add>", "<Edit...>", "<Delete>", "<Ba
 //char *exitActionsStr = "<Exit>";
 //bool shouldOmitMenuOption[ACTIONS_CNT] = {false, false};
 
-int (*actionsFunArr[ACTIONS_CNT])() = {NULL, NULL, NULL, &backFunction};
+int (*actionsFunArr[ACTIONS_CNT])() = {&createBoard, NULL, NULL, &backFunction};
 
 int action = 0;
 

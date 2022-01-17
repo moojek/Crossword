@@ -51,7 +51,7 @@ void showSelector()
 //    wrefresh(selectorWin);
 //    wrefresh(emptySelectorTextWin);
 
-    if (false) // TODO: implement condition - selector list not empty
+    if (!isBoardsDBEmpty()) // TODO: check correctness
         show_panel(selectorPanel);
     else
         show_panel(emptySelectorPanel);
