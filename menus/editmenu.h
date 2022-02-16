@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include "editmenu/actions.h"
 #include "editmenu/selector.h"
-#include "../misc.h"
+#include "../utils.h"
 
 void createEditMenu();
 void showEditMenu();

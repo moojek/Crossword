@@ -18,7 +18,7 @@ const int mainMenuTitleStrLen = 20;
 const char *mainMenuSelectStr = "Please select an option";
 const char *mainMenuOptionsStrArr[MAIN_MENU_OPTION_CNT] = {/*"Solve a crossword", */"Edit crossword boards", "Quit"};
 
-void (*optionsFunArr[MAIN_MENU_OPTION_CNT])() = {/*NULL,*/ &operateEditMenu, &exitProgram};
+int (*optionsFunArr[MAIN_MENU_OPTION_CNT])() = {/*NULL,*/ &operateEditMenu, &exitProgram};
 
 int mainMenuOption = 0;
 
@@ -47,7 +47,7 @@ void createMainMenu()
     mainMenuStartY = (LINES - mainMenuHeight) / 2;
     mainMenuStartX = (COLS - mainMenuWidth) / 2;
 
-    mainMenuShadowWin = newwin(mainMenuHeight, mainMenuWidth, mainMenuStartY, mainMenuStartX);
+    mainMenuShadowWin = newwin(mainMenuHeight, mainMenuWidth, mainMenuStartY + 1, mainMenuStartX + 1);
     wbkgd(mainMenuShadowWin, COLOR_PAIR(COL_PAIR_SHADOW));
     mainMenuShadowPanel = new_panel(mainMenuShadowWin);
     hide_panel(mainMenuShadowPanel);

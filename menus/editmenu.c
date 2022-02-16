@@ -39,17 +39,10 @@ void createEditMenu()
     createActions(editmenuWinHeight, editmenuWinWidth, selectorWidth, editmenuStartY, editmenuStartX);
 
     createSelector(editmenuWinHeight, editmenuWinWidth, selectorWidth, editmenuStartY, editmenuStartX);
-
-//    refresh();
 }
 
 void showEditMenu()
 {
-//    wrefresh(editMenuShadowWin);
-//    wrefresh(editMenuWin);
-//    showActions();
-//    showSelector();
-
     show_panel(editMenuShadowPanel);
     show_panel(editMenuPanel);
     showSelector();
@@ -61,11 +54,6 @@ void showEditMenu()
 
 void hideEditMenu()
 {
-//    wclear(editMenuWin);
-//    wrefresh(editMenuWin);
-//    delwin(editMenuWin);
-//    editMenuWin = NULL;
-
     hideActions();
     hideSelector();
     hide_panel(editMenuPanel);
@@ -82,6 +70,7 @@ int operateEditMenu()
     int keyPress = -1;
     int (*operateFun)(int);
 
+    // TODO
     if (true) { // boards empty
         highlightActions();
         operateFun = &operateActions;

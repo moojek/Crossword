@@ -8,7 +8,8 @@
 #include <ncurses.h>
 #include <panel.h>
 #include <string.h>
-#include "../../misc.h"
+#include "../../utils.h"
+#include "../../boards/boards_db.h"
 
 void createSelector(int, int, int, int, int);
 void showSelector();
