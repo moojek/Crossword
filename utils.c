@@ -41,8 +41,8 @@ void throw(char *msg)
 void addTitle(WINDOW *win, char *titleStr)
 {
     int winWidth = getmaxx(win);
-    fprintf(stderr, "addTitle for \"%s\": getmaxx(win) = %d, getbegx(win) = %d, winWidth = %d\n", titleStr,
-            getmaxx(win), getbegx(win), winWidth);
+//    fprintf(stderr, "addTitle for \"%s\": getmaxx(win) = %d, getbegx(win) = %d, winWidth = %d\n", titleStr,
+//            getmaxx(win), getbegx(win), winWidth);
     int titleStartX = (winWidth - (strlen(titleStr) + 4)) / 2;
     mvwprintw(win, 0, titleStartX, "┤ ");
     wattron(win, COLOR_PAIR(COL_PAIR_TITLE));

@@ -84,10 +84,10 @@ int operateEditMenu()
     do {
         returnCode = 0;
 
-        fprintf(stderr, "Before switch, keyPress = %d\n", keyPress);
+//        fprintf(stderr, "Before switch, keyPress = %d\n", keyPress);
         switch (keyPress) {
             case KEY_LEFT:
-                fprintf(stderr, "case KEY_LEFT:\n");
+//                fprintf(stderr, "case KEY_LEFT:\n");
                 if (false) { // !boards empty
                     unhighlightActions();
                     highlightSelector();
@@ -106,6 +106,6 @@ int operateEditMenu()
 //        keyPress = wgetch(editMenuWin);
     } while (returnCode != BACK_CODE && (keyPress = wgetch(editMenuWin)) != KEY_ESC);
     keypad(editMenuWin, false);
-    fprintf(stderr, "Esc key assumed. keyPress == %d\n", (int) keyPress);
+//    fprintf(stderr, "Esc key assumed. keyPress == %d\n", (int) keyPress);
     hideEditMenu();
 }

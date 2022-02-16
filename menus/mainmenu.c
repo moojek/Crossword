@@ -61,9 +61,9 @@ void createMainMenu()
     mainMenuPanel = new_panel(mainMenuWin);
     hide_panel(mainMenuPanel);
 
-    fprintf(stderr, "mainMenuTitleWin debug: %d %d %d %d\n", mainMenuStartX, mainMenuWidth, mainMenuTitleStrLen,
-            mainMenuStartX + (mainMenuWidth - mainMenuTitleStrLen) / 2);
-    fprintf(stderr, "basic additional info: %d %d\n", LINES, COLS);
+//    fprintf(stderr, "mainMenuTitleWin debug: %d %d %d %d\n", mainMenuStartX, mainMenuWidth, mainMenuTitleStrLen,
+//            mainMenuStartX + (mainMenuWidth - mainMenuTitleStrLen) / 2);
+//    fprintf(stderr, "basic additional info: %d %d\n", LINES, COLS);
     mainMenuTitleWin = newwin(1, mainMenuTitleStrLen, mainMenuStartY,
                               mainMenuStartX + (mainMenuWidth - mainMenuTitleStrLen) / 2);
     wbkgd(mainMenuTitleWin, COLOR_PAIR(COL_PAIR_MENU));

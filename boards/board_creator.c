@@ -45,7 +45,7 @@ bool boardSizePromptOkButtonAvailable()
 void controlBoardSizePromptOkButtonHighlight()
 {
     if (boardSizePromptOkButtonAvailable()) {
-        fprintf(stderr, "Height bufffer: <%s>", field_buffer(boardSizePromptFieldArr[1], 0));
+//        fprintf(stderr, "Height bufffer: <%s>", field_buffer(boardSizePromptFieldArr[1], 0));
         item_opts_on(boardSizePromptMenuItems[1], O_SELECTABLE);
         set_current_field(boardSizePromptForm, current_field(boardSizePromptForm));
         form_driver(boardSizePromptForm, REQ_END_LINE);
@@ -141,16 +141,16 @@ int createBoard()
         switch (keyPress) {
             case KEY_DOWN:
                 if (activeRow == BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT - 1) {
-                    fprintf(stderr, "From last form to menu\n");
+//                    fprintf(stderr, "From last form to menu\n");
                     activateAndSelectBoardSizePromptMenu();
                     activeRow++;
                 } else if (activeRow < BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT - 1) {
                     if (form_driver(boardSizePromptForm, REQ_DOWN_FIELD) == E_OK) {
-                        fprintf(stderr, "From normal row to next row\n");
+//                        fprintf(stderr, "From normal row to next row\n");
                         form_driver(boardSizePromptForm, REQ_END_LINE);
                         activeRow++;
                     } else {
-                        fprintf(stderr, "From normal row to menu\n");
+//                        fprintf(stderr, "From normal row to menu\n");
                         activateAndSelectBoardSizePromptMenu();
                         activeRow = BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT;
                     }
@@ -158,7 +158,6 @@ int createBoard()
                 break;
             case KEY_UP:
                 if (activeRow == BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT) {
-//                    fprintf(stderr, "KEY_UP IF 2\n");
                     deactivateBoardSizePromptMenu();
                     if (form_driver(boardSizePromptForm, REQ_VALIDATION) != E_OK &&
                         strcmp(field_buffer(boardSizePromptFieldArr[1], 0), "  ") == 0) {
@@ -170,7 +169,6 @@ int createBoard()
                     }
                     form_driver(boardSizePromptForm, REQ_END_LINE);
                 } else if (activeRow > 0) {
-//                    fprintf(stderr, "KEY_UP IF 1\n");
                     if (form_driver(boardSizePromptForm, REQ_UP_FIELD) == E_OK) {
                         form_driver(boardSizePromptForm, REQ_END_LINE);
                         activeRow--;
@@ -184,7 +182,7 @@ int createBoard()
                     menu_driver(boardSizePromptMenu, REQ_LEFT_ITEM);
                 break;
             case KEY_RIGHT:
-                fprintf(stderr, "went right\n");
+//                fprintf(stderr, "went right\n");
                 if (activeRow < BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT)
 //                    if() TODO: make KEY_RIGHT not go above all input letters
                     form_driver(boardSizePromptForm, REQ_RIGHT_CHAR);
@@ -193,19 +191,17 @@ int createBoard()
                 break;
             case KEY_BACKSPACE:
                 if (activeRow < BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT) {
-                    fprintf(stderr, "Action backspace in if!\n");
+//                    fprintf(stderr, "Action backspace in if!\n");
                     form_driver(boardSizePromptForm, REQ_DEL_PREV);
                     controlBoardSizePromptOkButtonHighlight();
                 }
                 break;
 //            case KEY_DC: // TODO: implement delete key
 //                if(activeRow < BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT) {
-//                    fprintf(stderr, "Action delete in if!\n");
 //                    form_driver(boardSizePromptForm, REQ_DEL_)
 //                }
             case 10:
                 if (activeRow == BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT) {
-//                    fprintf(stderr, "Got inside case 10:\n");
                     returnCode = (*(int (*)()) item_userptr(current_item(boardSizePromptMenu)))();
                 } else if (activeRow < BOARD_SIZE_PROMPT_MENU_OPTIONS_CNT && boardSizePromptOkButtonAvailable()) {
                     returnCode = CONTINUE_CODE;
@@ -216,7 +212,7 @@ int createBoard()
                     form_driver(boardSizePromptForm, keyPress);
                     controlBoardSizePromptOkButtonHighlight();
                 }
-                fprintf(stderr, "Board creator switch default: keyPress = %d/%d\n", keyPress, KEY_BACKSPACE);
+//                fprintf(stderr, "Board creator switch default: keyPress = %d/%d\n", keyPress, KEY_BACKSPACE);
                 break;
         }
     } while (returnCode == NO_CODE && (keyPress = wgetch(boardSizePromptWin)) != KEY_ESC);
@@ -293,11 +289,11 @@ int createBoard()
 
     int y, x;
     getyx(boardCreatorWin, y, x);
-    fprintf(stderr, "cursor position %d %d\n", y, x);
-    fprintf(stderr, "wmove return code: %d/%d/%d\n", wmove(boardCreatorWin, 1, 2), OK, ERR);
+//    fprintf(stderr, "cursor position %d %d\n", y, x);
+//    fprintf(stderr, "wmove return code: %d/%d/%d\n", wmove(boardCreatorWin, 1, 2), OK, ERR);
     getyx(boardCreatorWin, y, x);
-    fprintf(stderr, "cursor position %d %d\n", y, x);
-    fprintf(stderr, "curs_set return code: %d/%d", curs_set(1), ERR);
+//    fprintf(stderr, "cursor position %d %d\n", y, x);
+//    fprintf(stderr, "curs_set return code: %d/%d", curs_set(1), ERR);
     wprintw(boardCreatorWin, "abc");
 //    wmove(boardEditorDerWin, 1, 1);
 //    wprintw(boardEditorDerWin, "abc");
