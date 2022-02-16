@@ -15,6 +15,8 @@
 #define NO_CODE 0
 #define BACK_CODE 1
 #define ERR_CODE (-1)
+#define CANCEL_CODE 2
+#define CONTINUE_CODE 3
 
 #define COL_PAIR_BG 1
 #define COL_PAIR_FRAME 1
@@ -43,6 +45,10 @@ void config();
 
 void throw(char *);
 
-void addTitle(WINDOW*, char*);
+void addTitle(WINDOW *, char *);
+
+int min(int, int);
+
+int max(int ,int);
 
 #endif //CROSSWORD_UTILS_H

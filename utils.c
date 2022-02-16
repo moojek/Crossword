@@ -14,7 +14,7 @@ void initColours()
     assert(has_colors());
     start_color();
     init_pair(COL_PAIR_BG, COLOR_WHITE, COLOR_BLUE);
-    init_pair(COL_PAIR_SHADOW, COLOR_WHITE, COLOR_BLACK);
+    init_pair(COL_PAIR_SHADOW, COLOR_BLACK, COLOR_BLACK);
     init_pair(COL_PAIR_MENU, COLOR_BLACK, COLOR_WHITE);
     init_pair(COL_PAIR_HL, COLOR_WHITE, COLOR_RED);
     init_pair(COL_PAIR_LL, COLOR_BLUE, COLOR_WHITE);
@@ -49,4 +49,14 @@ void addTitle(WINDOW *win, char *titleStr)
     mvwprintw(win, 0, titleStartX + 2, "%s", titleStr);
     wattroff(win, COLOR_PAIR(COL_PAIR_TITLE));
     mvwprintw(win, 0, titleStartX + 2 + strlen(titleStr), " ├");
+}
+
+int min(int a, int b)
+{
+    return a < b ? a : b;
+}
+
+int max(int a, int b)
+{
+    return a > b ? a : b;
 }
